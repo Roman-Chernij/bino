@@ -1,0 +1,39 @@
+.title {
+
+    &2 {
+        font:900 36px/1.3 $font1-2;
+        text-transform: uppercase;
+        color: #6a6a6a;
+        letter-spacing: 4px;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            height: 36px;
+            width: 6px;
+            background-color: #e74c3c;
+            transform: translateY(-50%);
+        }
+
+        &_left {
+            padding-left: 37px;
+            margin-bottom:39px;
+
+            &::before {
+                left: 3px;
+            }
+        }
+
+        &_right {
+            padding-right: 37px;
+            margin-bottom:39px;
+
+            &::before {
+                right: 3px;
+            }
+        }
+    }
+}

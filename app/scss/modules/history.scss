@@ -1,0 +1,31 @@
+.history {
+    background-color: #f4f5f9;
+    padding: 141px 0 149px;
+
+    &-wrap {
+        display: flex;
+        margin: 0 -38px;
+    }
+
+    &-grid {
+        max-width: 50%;
+        padding: 0 38px;
+    }
+
+    &-img {
+    }
+
+    p {
+        line-height: 1.9;
+        margin-bottom: 44px;
+    }
+
+    &__link {
+        background-color: #e74c3c;
+        display: inline-block;
+        text-transform: uppercase;
+        font: 900 14px/1.4 $font2;
+        color: #fff;
+        padding: 19px 47px;
+    }
+}

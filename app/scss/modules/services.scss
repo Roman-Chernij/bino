@@ -1,0 +1,104 @@
+.services {
+    display: flex;
+    background-color: #202020;
+    position: relative;
+
+    .title2 {
+        margin-right: 82px;
+    }
+
+    &-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 auto;
+        align-items: flex-end;
+    }
+
+    &-images {
+        max-width: 880px;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 82px;
+        position: relative;
+
+        &.active {
+
+            .services__icon {
+                color: #ed9d96;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .services__icon {
+                color: darken($primary-color, 15%);
+                
+            }
+        }
+        
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        font: 700 18px/1.4 $font2;
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font: 14px/2.3 $font1;
+        color: #999;
+        width: 69%;
+        text-align: right;
+    }
+
+    &__icon {
+        background-color: #f4f5f9;
+        color: $primary-color;
+        border: 5px solid #585858;
+        border-radius: 50%;
+        width: 74px;
+        height: 74px;
+        font-size: 35px;
+        position: absolute;
+        top: 50%;
+        right: -37px;
+        transform: translateY(-50%);
+        transition: ease-in-out color .4s;
+        @include center-flex;
+    }
+
+    &-dots {
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-50%);
+
+        &__item {
+            height: 34px;
+            width: 1px;
+            background-color: #3e3e3e;
+            position: relative;
+            display: block;
+
+            &.active {
+                background-color: $primary-color;
+                width: 2px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 11px;
+            }
+        }
+    }
+}
