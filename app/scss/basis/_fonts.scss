@@ -1,6 +1,10 @@
 
 
 @include fontFace($font1, $font1Dir1);
+
 @include fontFace($font1-2, $font1Dir1-2);
+
+
 @include fontFace($font2, $font1Dir2);
+
 @include fontFace($fontello, $fontelloDir);

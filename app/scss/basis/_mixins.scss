@@ -82,6 +82,18 @@
   @return #{$remSize}rem;
 }
 
+@mixin lineDecor {
+    content: '';
+    background-color: $grey-type3;
+    width: 41px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 // Foundation for Sites by ZURB
 // foundation.zurb.com
 

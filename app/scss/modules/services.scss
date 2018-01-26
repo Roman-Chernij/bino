@@ -13,6 +13,7 @@
         justify-content: center;
         flex: 1 0 auto;
         align-items: flex-end;
+        padding: 40px 0;
     }
 
     &-images {
@@ -39,10 +40,10 @@
 
             .services__icon {
                 color: darken($primary-color, 15%);
-                
+
             }
         }
-        
+
         &:not(:last-child) {
             margin-bottom: 40px;
         }

@@ -21,15 +21,6 @@
 
     //CSS files
 gulp.task('sass:inject', () => {
-    // gulp.src('./app/scss/style.scss')
-    // .pipe(inject(gulp.src([
-    //     './app/scss/basis/index.scss',
-    //     './app/scss/layout/*.scss',
-    //     './app/scss/modules/*.scss',
-    //     './app/scss/state/*.scss',
-    //     './app/scss/theme/*.scss'
-    // ], {read: false}), { relative: true }))
-    // .pipe(gulp.dest('./app/scss'));
 
     var url =  {
             basis: 'app/scss/basis/index.scss',
@@ -54,6 +45,7 @@ gulp.task('sass:inject', () => {
       .pipe(inject(sources, {
         relative: true
       }))
+
       .pipe(gulp.dest('app/scss'))
   });
 

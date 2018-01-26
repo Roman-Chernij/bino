@@ -9,6 +9,7 @@ body {
 	min-width: #{$basis-min-width-window}px;
 	font: #{$basis-font-size}px/$basis-line-height $basis-font-family;
 	color:$basis-color;
+	background-color: $body-bg;
 }
 
 button,
