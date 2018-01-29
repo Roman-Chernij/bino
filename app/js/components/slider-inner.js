@@ -2,6 +2,9 @@
 function slider() {
     $('.slider-inner').slick({
       infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
       prevArrow:'<button class="slick-prev slick-arrow icon-left-open" aria-label="Previous" type="button"></button>',
       nextArrow:'<button class="slick-next slick-arrow icon-right-open" aria-label="Next" type="button"></button>'
     });
@@ -13,26 +16,13 @@ function slider() {
       dots: true
     });
 
-    $('.study-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.study-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
 
         let activeSlide = this.querySelector(`.slick-active`),
             activeSlideImg = activeSlide.getAttribute('data-img'),
-            studyImg = document.querySelector(`.study-img`);
+            studyImg = document.querySelector(`.study-img`),
+            studyImgUrl = studyImg.getAttribute('data-url');
 
-            studyImg.style.cssText += " background-image: url(images/study-img.jpg);"
-
-            // background-image: url(images/study-img.jpg);
-        // 'data-slick-index="'nextSlide'
-
-        // data-slick-index="#{nextSlide}"
-
-       console.log(studyImg);
-
+            studyImg.style.cssText += `background-image: url(${studyImgUrl}${activeSlideImg});`
     });
-}
-
-
-function ggg (event, slick, currentSlide, nextSlide) {
-
-
 }
