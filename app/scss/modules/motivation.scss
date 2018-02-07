@@ -12,10 +12,13 @@
     &-grid {
         width: 25%;
         padding: 0 15px 30px;
+        display: flex;
     }
 
     &-holder {
         padding: 0 20px;
+        display: flex;
+        flex-direction: column;
 
         &:hover {
             .motivation-holder-head-decor {
@@ -132,6 +135,7 @@
             padding-bottom:18px;
             margin-bottom: 17px;
             transition: ease-in-out color .4s;
+            flex: 1 0 auto;
 
             &:before {
                 content: '';
@@ -152,5 +156,10 @@
             text-align: center;
             color: $grey-type1;
         }
+    }
+
+    @include breakpoint ($tablet) {
+
+      padding: 40px 0 ;
     }
 }

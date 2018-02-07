@@ -9,9 +9,13 @@
     &-grid {
         max-width: 50%;
         padding: 0 38px;
+        display: flex;
+        flex-direction: column;
     }
 
     &-img {
+      @include center-flex;
+      flex: 1 0 auto;
     }
 
     p {
@@ -27,4 +31,21 @@
         color: #fff;
         padding: 19px 47px;
     }
+
+     @include breakpoint ($laptop) {
+
+       &-wrap {
+           display: flex;
+           margin: 0 -15px;
+       }
+
+       &-grid {
+           padding: 0 15px;
+       }
+     }
+
+     @include breakpoint ($tablet) {
+
+       padding: 40px 0;
+     }
 }

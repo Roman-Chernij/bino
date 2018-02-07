@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+
+  &-content {
+    width: 100%;
+    transition: linear transform .4s;
+
+  }
+
+  &-mobi-nav {
+    height: 100px;
+    width: 300px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: -300px;
+  }
+}

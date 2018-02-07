@@ -10,9 +10,10 @@ App.prototype.init = function () {
   new Mmenu();
 }
 
-window.addEventListener( "DOMContentLoaded", function() {
-	new App();
 
+window.addEventListener( "DOMContentLoaded", function() {
+
+	new App();
 
 	slider();
 });

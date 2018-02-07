@@ -6,6 +6,7 @@
         color: #fff;
         border: 3px solid #fff;
         padding: 0 7px 0 0;
+        display: block;
 
         span {
             background-color: #fff;
@@ -15,5 +16,13 @@
             margin-right: 10px;
             pointer-events: none;
         }
+    }
+
+    @include breakpoint ($tablet)  {
+
+      &__link {
+
+        font-size: 27px
+      }
     }
 }

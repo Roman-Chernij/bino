@@ -16,7 +16,8 @@
           csso            = require('gulp-csso'),
           sourcemaps      = require('gulp-sourcemaps'),
           plumber         = require('gulp-plumber'),
-          inject          = require('gulp-inject');
+          inject          = require('gulp-inject'),
+          browserify      = require("browserify");
 
 
     //CSS files
@@ -79,14 +80,13 @@ gulp.task('sass', ['sass:inject'],  () => {
     .pipe(browserSync.reload({stream: true}))
 });
 
-
 gulp.task('scripts', () => {
+
    var all = gulp.src([
      "app/js/Helper.js",
      "app/js/App.js",
      "app/js/components/*.js"
   ])
-
    .pipe(plumber())
    .pipe(sourcemaps.init())
    .pipe(babel({
@@ -135,6 +135,8 @@ gulp.task('browserSync', () => {
     });
 });
 
+
+
 gulp.task('img', () => {
         return gulp.src('app/images/**/*')
             .pipe(cache(imagemin({
@@ -157,9 +159,9 @@ gulp.task('clean', function () {
 gulp.task('watch', ['browserSync', 'sass', 'scripts'], () => {
     gulp.watch('app/scss/**/*.+(scss|sass)' , ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/components/*.js', ['scripts']);
-    gulp.watch('app/libs/libs.scss', browserSync.reload);
-    gulp.watch('app/img/**/*', ['img']);
+    gulp.watch('app/js/**/*.js', ['scripts']);
+    gulp.watch('app/libs/libs.scss', ['sass']);
+    gulp.watch('app/img/**/*', ['img'], browserSync.reload);
 });
 
 gulp.task('default', ['watch']);

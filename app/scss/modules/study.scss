@@ -30,8 +30,7 @@
         // transform: translateY(-50%);
         position: relative;
         z-index: 1;
-        background-color: #fff;
-        height: 631px;
+        // height: 631px;
         width: 57%;
 
         &__item {
@@ -39,6 +38,7 @@
             flex-direction: column;
             align-items: center;
             padding: 99px 60px 70px;
+            background-color: #fff;
         }
 
         &__icon {
@@ -129,5 +129,10 @@
             background-color: $body-bg;
             border-radius: 50%;
         }
+    }
+
+    @include breakpoint($tablet) {
+
+        padding: 40px 0 80px;
     }
 }

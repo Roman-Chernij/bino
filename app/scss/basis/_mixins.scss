@@ -11,7 +11,7 @@
 }
 
 
-// mixin @media => для коректной работы необходимо вызывать например @include for-size ($laptop) {стили}
+// mixin @media => для коректной работы необходимо вызывать например @include breakpoint ($laptop) {стили}
 
 @mixin breakpoint($media) {
 

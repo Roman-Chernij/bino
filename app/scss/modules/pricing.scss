@@ -138,4 +138,17 @@
             }
         }
     }
+
+    @include breakpoint($tablet) {
+
+      padding: 40px 0;
+
+      &-wrap {
+
+        &__grid {
+          width: 50%;
+          padding: 0 8px 17px;
+        }
+      }
+    }
 }

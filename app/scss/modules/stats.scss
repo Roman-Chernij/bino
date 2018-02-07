@@ -57,4 +57,29 @@
             color: $color-white-castom;
         }
     }
+
+     @include breakpoint ($laptop) {
+
+       &-wrap {
+           margin: 0 -15px;
+
+           &__grid {
+             padding: 0 15px;
+           }
+       }
+     }
+
+     @include breakpoint($tablet) {
+
+       padding: 40px 0;
+
+       &-wrap {
+         justify-content: flex-start;
+
+           &__grid {
+             padding: 0 15px 30px;
+             width: 33.33%;
+           }
+       }
+     }
 }

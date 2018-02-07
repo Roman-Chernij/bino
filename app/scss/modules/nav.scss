@@ -1,8 +1,11 @@
 .nav {
-    max-width: 63%;
-    width: 100%;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-end;
 
     &-list {
+        max-width: 63%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
 
@@ -14,6 +17,7 @@
             text-transform: uppercase;
             color: #f4f5f9;
             padding-bottom: 20px;
+            font-size: 14px;
             position: relative;
             transition: ease-in-out color .3s;
 
@@ -47,5 +51,38 @@
 
             }
         }
+    }
+
+    &-mobile {
+      display: none;
+
+      &__item {
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+
+    @include breakpoint ($tablet) {
+
+      padding-left: 30px;
+
+      &-list {
+        max-width: inherit;
+
+        &__link {
+          font-size: 16px;
+        }
+      }
+    }
+
+    @include breakpoint ($mobile) {
+
+      &-list {
+        display: none;
+      }
+
+      &-mobile {
+      display: block;
+      }
     }
 }

@@ -49,4 +49,16 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    @include breakpoint($tablet) {
+
+        padding: 40px 0;
+
+        &-filter {
+
+          &__link {
+            font-size: 13px;
+          }
+        }
+    }
 }
