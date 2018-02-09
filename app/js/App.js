@@ -16,4 +16,15 @@ window.addEventListener( "DOMContentLoaded", function() {
 	new App();
 
 	slider();
+	filter ({
+		blockFilter: '.works',
+		btnFilterBlock: '.works-filter',
+		btnFilterCheck: {
+			tag: 'A',
+			dataAttr: 'data-filter-value'
+		},
+		productFilterBox: '.works-content',
+		productFilterItem: '.works-holder',
+		startRespons: 767
+	});
 });

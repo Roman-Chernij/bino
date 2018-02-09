@@ -173,4 +173,38 @@
         }
       }
     }
+
+    @include breakpoint ($mobile) {
+
+      &-dots {
+        display: none;
+      }
+
+      &__title {
+        font: 700 16px/1.4 $font2;
+      }
+
+      &__text {
+          font: 12px/2.3 $font1;
+          color: #999;
+          width: 69%;
+          width: 100%;
+      }
+
+      .title2 {
+          margin-right: 15px;
+      }
+
+      &-holder {
+        flex-wrap: wrap;
+      }
+
+      &__icon {
+        display: none;
+      }
+
+      &-images {
+        display: none;
+      }
+    }
 }

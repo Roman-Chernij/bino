@@ -95,4 +95,12 @@
     @include breakpoint ($tablet) {
       width: 33.33%;
     }
+
+    @include breakpoint ($mobile) {
+      width: 50%;
+    }
+
+    @include breakpoint ($mobileM) {
+      width: 100%;
+    }
 }

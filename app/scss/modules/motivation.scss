@@ -162,4 +162,25 @@
 
       padding: 40px 0 ;
     }
+
+    @include breakpoint ($mobile) {
+
+      &-grid {
+        width: 50%;
+        padding-bottom: 15px;
+      }
+    }
+
+    @include breakpoint ($mobileM) {
+
+      &-inner {
+        margin: 0;
+      }
+
+      &-grid {
+
+        width: 100%;
+        padding: 0 0 15px;
+      }
+    }
 }

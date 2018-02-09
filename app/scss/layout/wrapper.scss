@@ -1,20 +1,33 @@
 .wrapper {
   display: flex;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+
+  &-inner {
+
+    width: 100%;
+    transition: ease-in-out transform .4s;
+  }
 
   &-content {
     width: 100%;
-    transition: linear transform .4s;
-
   }
 
   &-mobi-nav {
-    height: 100px;
     width: 300px;
     background-color: #000;
     position: absolute;
     top: 0;
     right: -300px;
+    bottom: 0;
+    background-color: $color-white-castom;
+    // transform: translateX(300px);
+  }
+
+  @include breakpoint ($mobileM) {
+    &-mobi-nav {
+      width: 260px;
+    }
   }
 }

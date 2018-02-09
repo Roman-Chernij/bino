@@ -2,7 +2,7 @@ function Mmenu() {
   this.nav = document.querySelector('.nav');
   this.navList = this.nav.querySelector('.nav-list');
   this.wrapperMobiNav = document.querySelector ('.wrapper-mobi-nav');
-  this.wrapperContent = document.querySelector ('.wrapper-content');
+  this.wrapperContent = document.querySelector ('.wrapper-inner');
 
   this.init ();
 }
@@ -28,7 +28,7 @@ Mmenu.prototype.modiIconClick = function (e) {
         let targetStatus = target.getAttribute('data-status'),
             widthMobi = this.wrapperMobiNav.clientWidth;
 
-        if(targetStatus) {
+        if(targetStatus === 'true') {
           this.wrapperContent.style.cssText += `transform: translateX(0px);`;
           target.setAttribute('data-status', 'false');
         } else {
@@ -40,6 +40,6 @@ Mmenu.prototype.modiIconClick = function (e) {
 
 
 
-    console.log(target);
+    console.log('targetStatus', targetStatus);
 
 }

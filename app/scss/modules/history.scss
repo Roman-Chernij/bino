@@ -7,7 +7,7 @@
     }
 
     &-grid {
-        max-width: 50%;
+        width: 50%;
         padding: 0 38px;
         display: flex;
         flex-direction: column;
@@ -47,5 +47,30 @@
      @include breakpoint ($tablet) {
 
        padding: 40px 0;
+     }
+
+     @include breakpoint ($mobile)  {
+
+       &-wrap {
+         margin: 0;
+         flex-direction: column;
+       }
+
+       &-grid {
+         width: 100%;
+         padding: 0;
+       }
+
+       &-wrap-btn {
+         text-align: center;
+       }
+
+       &-img {
+         margin-bottom: 20px;
+       }
+
+       &__link {
+         padding: 14px 10px;
+       }
      }
 }
