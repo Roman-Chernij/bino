@@ -1,6 +1,7 @@
 $contactGridPadding: 15;
 
 .contact {
+    padding: 70px 0 0;
 
     &-wrap {
         margin: 0 -#{$contactGridPadding}px;
@@ -10,7 +11,12 @@ $contactGridPadding: 15;
 
             padding: 0 #{$contactGridPadding}px;
 
-            &_greed {
+            &_address {
+                width: 43%;
+                display: flex;
+            }
+
+            &_form {
                 flex: 1 0 auto;
             }
         }
@@ -48,6 +54,7 @@ $contactGridPadding: 15;
     &-form {
 
         background-color: #fff;
+        padding: 100px 100px;
 
         &-field {}
 
@@ -55,6 +62,8 @@ $contactGridPadding: 15;
         &__textarea {
             border: none;
             outline: none;
+            font: 600 14px/1.5 $font2;
+            color: $grey-type1;
         }
 
         &__input {}

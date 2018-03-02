@@ -221,15 +221,18 @@
                   <section class="works">
                       <div class="container">
                           <h2 class="title-main">RECENT WORKS<span class="title-main__subtitle">It has survived not only five centuries, but also the leap scrambled it to make a type.</span></h2>
-                          <ul class="works-filter">
-                              <li class="works-filter__item"><a class="works-filter__link active" href="javascript:void(0)" data-filter-value="all">ALL</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="design">PRINT DESIGN</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="animation">ANIMATION</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="art">ART</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="webDesign">WEB DESIGN</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="photography">PHOTOGRAPHY</a></li>
-                              <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="video">VIDEO</a></li>
-                          </ul>
+                          <div class="works-filter-holder">
+                              <span class="works-selector"></span>
+                              <ul class="works-filter">
+                                  <li class="works-filter__item"><a class="works-filter__link active" href="javascript:void(0)" data-filter-value="all">ALL</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="design">PRINT DESIGN</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="animation">ANIMATION</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="art">ART</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="webDesign">WEB DESIGN</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="photography">PHOTOGRAPHY</a></li>
+                                  <li class="works-filter__item"><a class="works-filter__link" href="javascript:void(0)" data-filter-value="video">VIDEO</a></li>
+                              </ul>
+                          </div>
                       </div>
                       <div class="works-content">
                           <a href="#"  class="works-holder" data-filter-target="all art">
@@ -517,7 +520,6 @@
                   <section class="blog">
                       <div class="container">
                           <h2 class="title-main">OUR BLOG<span class="title-main__subtitle">Suspendisse sed eros mollis, tincidunt felis eget, interdum eratullam sit amet odio.</span></h2>
-
                       </div>
                       <div class="blog__wrap">
                           <div class="blog__item">
@@ -526,10 +528,143 @@
                                       <img src="images/blog1.jpg" alt="">
                                   </div>
                                   <div class="blog-holder__info">
-                                      <span class="blog-holder__dir">art / t-shirt</span>
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
                                       <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
                                       <div class="blog-holder__description">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
+                                      </div>
+                                      <div class="blog-holder-link">
+                                          <a href="#" class="icon-right-open">Read more</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog__item">
+                              <div class="blog-holder">
+                                  <div class="blog-holder__image">
+                                      <img src="images/blog1.jpg" alt="">
+                                  </div>
+                                  <div class="blog-holder__info">
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
+                                      <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
+                                      <div class="blog-holder__description">
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
+                                      </div>
+                                      <div class="blog-holder-link">
+                                          <a href="#" class="icon-right-open">Read more</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog__item">
+                              <div class="blog-holder">
+                                  <div class="blog-holder__image">
+                                      <img src="images/blog1.jpg" alt="">
+                                  </div>
+                                  <div class="blog-holder__info">
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
+                                      <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
+                                      <div class="blog-holder__description">
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
+                                      </div>
+                                      <div class="blog-holder-link">
+                                          <a href="#" class="icon-right-open">Read more</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog__item">
+                              <div class="blog-holder">
+                                  <div class="blog-holder__image">
+                                      <img src="images/blog1.jpg" alt="">
+                                  </div>
+                                  <div class="blog-holder__info">
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
+                                      <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
+                                      <div class="blog-holder__description">
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
+                                      </div>
+                                      <div class="blog-holder-link">
+                                          <a href="#" class="icon-right-open">Read more</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog__item">
+                              <div class="blog-holder">
+                                  <div class="blog-holder__image">
+                                      <img src="images/blog1.jpg" alt="">
+                                  </div>
+                                  <div class="blog-holder__info">
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
+                                      <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
+                                      <div class="blog-holder__description">
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
+                                      </div>
+                                      <div class="blog-holder-link">
+                                          <a href="#" class="icon-right-open">Read more</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="blog__item">
+                              <div class="blog-holder">
+                                  <div class="blog-holder__image">
+                                      <img src="images/blog1.jpg" alt="">
+                                  </div>
+                                  <div class="blog-holder__info">
+                                      <ul class="blog-holder-dir">
+                                          <li class="blog-holder-dir__item">art</li>
+                                          <li class="blog-holder-dir__item">t-shirt</li>
+                                      </ul>
+                                      <h3 class="blog-holder__title">T-SHIRT DESIGN</h3>
+                                      <div class="blog-holder__description">
+                                          <div>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's standard dummy text ever since the 1500s, an unknown printer took a galley of type a scrambled it to make a type specimen book.</p>
+                                          </div>
+
                                       </div>
                                       <div class="blog-holder-link">
                                           <a href="#" class="icon-right-open">Read more</a>
@@ -539,11 +674,11 @@
                           </div>
                       </div>
                   </section>
-                <section id="contact" class="contact">
+                  <section id="contact" class="contact">
                     <div class="container">
                          <h2 class="title-main">kEEP IN TOUCH<span class="title-main__subtitle">Nullam sit amet odio eu est aliquet euismod a a urna. Proin eu urna suscipit, dictum quam nec.</span></h2>
                         <div class="contact-wrap">
-                            <div class="contact-wrap__grid">
+                            <div class="contact-wrap__grid contact-wrap__grid_address">
                                 <div class="contact-holder">
                                     <div class="contact-holder-field">
                                         <h3 class="contact-holder__title">OUR ADDRESS</h3>
@@ -568,19 +703,20 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="contact-wrap__grid_greed">
+                            <div class="contact-wrap__grid contact-wrap__grid_form">
                                 <form class="contact-form">
                                     <div class="contact-form-field">
-                                        <input type="text" class="contact-form__input" placeholder="name" name="" value="">
+                                        <input type="text" class="contact-form__input" id="contact-name" placeholder="name"  name="">
+                                        <label for="contact-name" ></label>
                                     </div>
                                     <div class="contact-form-field">
-                                        <input type="email" class="contact-form__input" placeholder="email" name="" value="">
+                                        <input type="email" class="contact-form__input" id="contact-email" placeholder="email" name="">
                                     </div>
                                     <div class="contact-form-field">
-                                        <input type="text" class="contact-form__input" placeholder="name" name="" value="">
+                                        <input type="text" class="contact-form__input" id="contact-Subject" placeholder="Subject" name="">
                                     </div>
                                     <div class="contact-form-field">
-                                        <textarea class="contact-form__textarea" name="name"></textarea>
+                                        <textarea class="contact-form__textarea" id="contact-contact-form__textarea" name="contact-form__textarea"></textarea>
                                     </div>
                                 </form>
                             </div>

@@ -1,17 +1,30 @@
 .blog {
 
-    padding: 110px 0 125px;
+    padding: 110px 0 70px;
 
-  &__wrap {}
+  &__wrap {
+      display: flex;
+      flex-wrap: wrap;
+  }
 
-  &__item {}
+  &__item {
+      width: 25%;
+  }
 
   &-holder {
 
       position: relative;
-      width: 25%;
+      // width: 25%;
 
-    &__image {}
+      &:hover {
+          .blog-holder__info {
+              transform: translateX(100%);
+          }
+      }
+
+    &__image {
+        position: relative;
+    }
 
     &__info {
       background-color: $primary-color2;
@@ -21,37 +34,71 @@
       right: 0;
       bottom: 0;
       left: 0;
-      transform: translateX(100%);
+      transition: ease-in-out transform .3s;
       padding: 65px 50px 60px;
       display: flex;
       flex-direction: column;
+      z-index: -1;
     }
 
-    &__dir {
-        font:300 14px/1.5 $font1;
-        margin-bottom: 10px;
+    &-dir {
+        margin-bottom: 20px;
+        display: flex;
+
+        &__item {
+            font:300 15px/1.5 $font1;
+            letter-spacing: 1px;
+
+            &:not(:last-child) {
+                padding-right: 16px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    height: 65%;
+                    width: 1px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    right: 9px;
+                    transform: rotate(20deg) translateY(-50%);
+                }
+            }
+        }
     }
 
     &__title {
-      font:700 16px/1.5 $font1;
-      margin-bottom: 20px;
+      font:700 18px/1.5 $font1;
+      margin-bottom: 45px;
+      letter-spacing: 5px;
+      position: relative;
+      padding-bottom: 19px;
+
+      &::before {
+          content: '';
+          width: 47px;
+          height: 3px;
+          display: block;
+          background-color: #fff;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+      }
     }
 
     &__description {
-      font: 16px/1.5 $font2;
+      font: 16px/1.9 $font2;
       margin-bottom: 15px;
       flex: 1 0 auto;
       max-height: 180px;
-      overflow-x: hidden;
-      overflow-y: auto;
+      // overflow-x: hidden;
+      // overflow-y: auto;
+      overflow: hidden;
+      position: relative;
 
       p {
 
           margin-bottom: 0;
-
-          &:not(:last-child) {
-              margin-bottom: 15px;
-          }
       }
     }
 
@@ -78,4 +125,23 @@
         }
     }
   }
+
+  @include breakpoint ($laptop) {
+      &__item {
+          width: 33.33%;
+      }
+  }
+
+  @include breakpoint ($tabletM) {
+      &__item {
+          width: 50%;
+      }
+  }
+
+  @include breakpoint ($mobileM) {
+      &__item {
+          width: 100%;
+      }
+  }
+
 }

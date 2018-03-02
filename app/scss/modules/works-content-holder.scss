@@ -3,6 +3,12 @@
     display: block;
     position: relative;
     overflow: hidden;
+    transition: ease-in-out width .5s;
+    height: 476px;
+
+    &.hide {
+        width: 0;
+    }
 
     &::before {
         content: '';
@@ -30,6 +36,11 @@
     }
 
     &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
         img {
             width: 100%;

@@ -1,12 +1,15 @@
-function Mmenu() {
-  this.nav = document.querySelector('.nav');
-  this.navList = this.nav.querySelector('.nav-list');
-  this.wrapperMobiNav = document.querySelector ('.wrapper-mobi-nav');
-  this.wrapperContent = document.querySelector ('.wrapper-inner');
+function Mmenu(setings) {
+  this.setings = setings;
+  this.nav = document.querySelector(this.setings.navWraper);
+  this.navList = this.nav.querySelector(this.setings.nav);
+  this.wrapperMobiNav = document.querySelector (this.setings.wrapperMobi);
+  this.wrapperContent = document.querySelector (this.setings.wrapper);
+  this.btn = this.nav.querySelector(this.setings.btn.className);
 
   this.init ();
-}
 
+
+}
 
 Mmenu.prototype = Object.create(App.prototype);
 
@@ -15,31 +18,38 @@ Mmenu.prototype.init = function () {
   let widthWindow = document.body.clientWidth;
 
 
-  this.nav.addEventListener('click', this.modiIconClick.bind(this));
+  this.nav.addEventListener('click', this.mobiIconClick.bind(this));
+
+  window.addEventListener('resize', this.mobiResize.bind(this));
 }
 
 
-Mmenu.prototype.modiIconClick = function (e) {
-    let target = e && e.target || e.srcElement,
-        targetAttr = target.getAttribute('data-btn');
+Mmenu.prototype.mobiIconClick = function (e) {
+    const target = e && e.target || e.srcElement,
+          targetAttr = target.getAttribute(this.setings.btn.attr);
 
-        if(target.tagName != 'SPAN' || targetAttr !='mobi-btn') return;
+        if(target.tagName != this.setings.btn.item || targetAttr != this.setings.btn.value) return;
 
-        let targetStatus = target.getAttribute('data-status'),
-            widthMobi = this.wrapperMobiNav.clientWidth;
+        this.mobiTransform (target);
+}
 
-        if(targetStatus === 'true') {
-          this.wrapperContent.style.cssText += `transform: translateX(0px);`;
-          target.setAttribute('data-status', 'false');
-        } else {
-          this.wrapperContent.style.cssText += `transform: translateX(-${widthMobi}px);`
-          target.setAttribute('data-status', 'true')
-        }
+Mmenu.prototype.mobiTransform = function (elem) {
+
+    const targetStatus = elem.getAttribute('data-status'),
+          widthMobi = this.wrapperMobiNav.clientWidth;
+
+    if(targetStatus === 'true') {
+      this.wrapperContent.style.cssText += `transform: translateX(0px);`;
+      elem.setAttribute('data-status', 'false');
+    } else {
+      this.wrapperContent.style.cssText += `transform: translateX(-${widthMobi}px);`
+      elem.setAttribute('data-status', 'true')
+    }
+}
 
 
+Mmenu.prototype.mobiResize = function (elem) {
 
-
-
-    console.log('targetStatus', targetStatus);
-
+    this.wrapperContent.style.cssText += `transform: translateX(0px);`;
+    this.btn.setAttribute('data-status', 'false');
 }

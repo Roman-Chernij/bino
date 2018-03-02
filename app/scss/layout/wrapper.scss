@@ -22,12 +22,29 @@
     right: -300px;
     bottom: 0;
     background-color: $color-white-castom;
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+
+        &__item {
+            display: flex;
+            padding-bottom: 5px;
+        }
+
+        &__link {
+            color: #000;
+            display: block;
+            padding-bottom: 7px;
+        }
+    }
     // transform: translateX(300px);
   }
 
   @include breakpoint ($mobileM) {
     &-mobi-nav {
       width: 260px;
+      right: -260px;
     }
   }
 }
