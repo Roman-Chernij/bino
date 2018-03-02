@@ -1,0 +1,66 @@
+$contactGridPadding: 15;
+
+.contact {
+
+    &-wrap {
+        margin: 0 -#{$contactGridPadding}px;
+        display: flex;
+
+        &__grid {
+
+            padding: 0 #{$contactGridPadding}px;
+
+            &_greed {
+                flex: 1 0 auto;
+            }
+        }
+    }
+
+    &-holder {
+        background-color: #fff;
+
+        &-field {}
+
+        &__title {
+            font: 700 24px/1.4 $font1;
+            color: $primary-color2;
+            text-transform: uppercase;
+        }
+
+        &__info {
+            font: normal 18px/1.5 $font2;
+            color: $grey-type1;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                font: inherit;
+                color: inherit;
+
+                &:hover {
+
+                    color: darken($grey-type1, 15%);
+                }
+            }
+        }
+    }
+
+    &-form {
+
+        background-color: #fff;
+
+        &-field {}
+
+        &__input,
+        &__textarea {
+            border: none;
+            outline: none;
+        }
+
+        &__input {}
+
+        &__textarea {}
+    }
+
+
+}

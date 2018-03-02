@@ -16,8 +16,8 @@
           csso            = require('gulp-csso'),
           sourcemaps      = require('gulp-sourcemaps'),
           plumber         = require('gulp-plumber'),
-          inject          = require('gulp-inject'),
-          browserify      = require("browserify");
+          inject          = require('gulp-inject');
+          // browserify      = require("browserify");
 
 
     //CSS files
